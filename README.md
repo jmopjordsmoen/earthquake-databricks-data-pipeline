@@ -8,6 +8,9 @@ The goal of the project was not scale or production deployment, but to learn how
 
 Built using Azure Databricks, Azure Data Factory, and Azure Data Lake Storage.
 
+<img width="1078" height="200" alt="image" src="https://github.com/user-attachments/assets/b637d495-a444-4e86-917c-cbe983d667f2" />
+
+
 🎯 What I Wanted to Learn
 
 How a medallion architecture works in practice
