@@ -1,12 +1,12 @@
 🌍 Earthquake Data Pipeline — Azure Databricks Learning Project
 
-This project is a personal learning exercise where I built a small end-to-end cloud data pipeline to understand how modern data engineering workflows are implemented in Azure.
+This is a personal learning project created to understand how modern cloud data platforms work together using Microsoft Azure and Databricks.
 
-The pipeline ingests public earthquake data from the USGS API, processes it using a Medallion Architecture, and stores curated datasets in a data lake for querying.
+I built a small end-to-end data pipeline that ingests public earthquake data from the USGS API, processes it through layered transformations, and stores it in a cloud data lake.
 
-The goal of the project was not scale or production deployment, but to learn how different Azure data services work together in a realistic workflow.
+The purpose of the project was to gain hands-on experience with real data engineering workflows — especially authentication, orchestration, storage structure, and Spark processing — rather than to build a production-scale system.
 
-Built using Azure Databricks, Azure Data Factory, and Azure Data Lake Storage.
+Built primarily using Azure Databricks and Microsoft Azure services.
 
 
 <img width="1170" height="439" alt="image" src="https://github.com/user-attachments/assets/a048b0ee-7207-4661-bdf8-bb969ba2deeb" />
@@ -14,87 +14,77 @@ Built using Azure Databricks, Azure Data Factory, and Azure Data Lake Storage.
 <img width="1078" height="200" alt="image" src="https://github.com/user-attachments/assets/b637d495-a444-4e86-917c-cbe983d667f2" />
 
 
-🎯 What I Wanted to Learn
+🎯 Learning Focus
 
-How a medallion architecture works in practice
+The project was designed to learn:
 
-How Databricks notebooks communicate in a workflow
+Databricks
 
-How Azure manages permissions using managed identity & RBAC
+Notebook workflows
 
-How to orchestrate jobs using Data Factory
+Task orchestration
 
-How raw API data becomes analytics-ready tables
+Parameter passing between tasks
 
-🏗 High Level Architecture
-USGS Earthquake API
-        ↓
-Azure Data Factory (trigger & orchestration)
-        ↓
-Databricks Notebooks (Bronze → Silver → Gold)
-        ↓
+Spark data processing with PySpark
+
+Reading and writing distributed files
+
+Working with external locations and Unity Catalog
+
+Azure
+
+Role-based access control (RBAC)
+
+Managed identity authentication
+
+Data Lake storage structure
+
+Service integration between Azure components
+
+Pipeline orchestration concepts
+
+🏗 Architecture
+Public REST API
+      ↓
+Azure Data Factory (pipeline trigger)
+      ↓
+Databricks Notebooks (processing)
+      ↓
 Azure Data Lake Storage Gen2
 
 
-The pipeline runs notebooks sequentially and passes parameters between them.
+The pipeline executes notebooks sequentially and shares outputs between them.
 
-🧱 Data Layers
-Bronze — Raw Data
+🧱 Data Layers (Medallion Architecture)
+Bronze — Raw
 
-Calls the earthquake REST API
+Fetches earthquake data and stores the original JSON response.
 
-Saves raw JSON exactly as received
+Silver — Cleaned
 
-Keeps historical records
+Normalizes the structure and converts timestamps into usable columns.
 
-Example:
+Gold — Enriched
 
-/bronze/2026-02-14_earthquake_data.json
-
-Silver — Cleaned Data
-
-Transforms raw JSON into structured format:
-
-Flatten nested structure
-
-Convert timestamps
-
-Handle missing values
-
-Select relevant columns
-
-Stored as Parquet files.
-
-Gold — Enriched Data
-
-Adds analytical value:
-
-Reverse geocoding → country code
-
-Earthquake significance classification (Low / Moderate / High)
-
-This layer represents a dataset analysts could use directly.
+Adds country code and earthquake significance classification.
 
 🔄 Pipeline Flow
-Step	Notebook	Purpose
-1	Bronze	Ingest API data
-2	Silver	Clean & structure
-3	Gold	Enrich & classify
+Step	Purpose
+Bronze	API ingestion
+Silver	Cleaning & structuring
+Gold	Enrichment
 
-Notebooks communicate using:
-
-dbutils.jobs.taskValues
+Communication between steps is handled using Databricks workflow task values.
 
 🛠 Technologies Used
 
 PySpark
 
-REST API ingestion
+REST APIs
 
-Databricks workflows
+Cloud object storage
 
-ADLS Gen2 external locations
+Distributed processing
 
-Managed identity authentication
-
-Basic data enrichment with Python UDF
+Notebook orchestration
