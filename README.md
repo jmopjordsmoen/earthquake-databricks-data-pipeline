@@ -8,6 +8,7 @@ The purpose of the project was to gain hands-on experience with real data engine
 
 Built primarily using Azure Databricks and Microsoft Azure services.
 
+<img width="1437" height="515" alt="image" src="https://github.com/user-attachments/assets/7f5e2132-59b7-4599-8ee6-fb48954565cd" />
 
 <img width="1170" height="439" alt="image" src="https://github.com/user-attachments/assets/a048b0ee-7207-4661-bdf8-bb969ba2deeb" />
 
@@ -88,3 +89,5 @@ Cloud object storage
 Distributed processing
 
 Notebook orchestration
+
+
