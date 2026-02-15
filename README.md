@@ -12,7 +12,8 @@ Built primarily using Azure Databricks and Microsoft Azure services.
 
 <img width="1170" height="439" alt="image" src="https://github.com/user-attachments/assets/a048b0ee-7207-4661-bdf8-bb969ba2deeb" />
 
-<img width="1691" height="648" alt="image" src="https://github.com/user-attachments/assets/4c52f081-b99b-4958-9b61-db70e1ea32f1" />
+<img width="1691" height="648" alt="image" src="https://github.com/user-attachments/assets/817631fb-7eef-4cac-8a9a-2d7b4ec3c320" />
+
 
 
 🎯 Learning Focus
