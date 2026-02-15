@@ -8,8 +8,7 @@ The goal of the project was not scale or production deployment, but to learn how
 
 Built using Azure Databricks, Azure Data Factory, and Azure Data Lake Storage.
 
-<img width="1071" height="275" alt="image" src="https://github.com/user-attachments/assets/7a47edc3-26a9-4266-810c-fdc0d887589a" />
-
+<img width="1170" height="439" alt="image" src="https://github.com/user-attachments/assets/020e4afd-8e8a-4b10-9f57-453d806cff86" />
 
 <img width="1078" height="200" alt="image" src="https://github.com/user-attachments/assets/b637d495-a444-4e86-917c-cbe983d667f2" />
 
