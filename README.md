@@ -16,6 +16,8 @@ Built primarily using **Azure Databricks** and **Microsoft Azure** services.
 
 ## 📸 Project Screenshots
 
+<img width="998" height="548" alt="image" src="https://github.com/user-attachments/assets/5ff20d0a-df89-47c9-82d7-4a857d650c7c" />
+
 ![Screenshot 1](https://github.com/user-attachments/assets/7f5e2132-59b7-4599-8ee6-fb48954565cd)
 
 ![Screenshot 2](https://github.com/user-attachments/assets/a048b0ee-7207-4661-bdf8-bb969ba2deeb)
